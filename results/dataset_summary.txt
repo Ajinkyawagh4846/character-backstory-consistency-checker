@@ -1,0 +1,151 @@
+================================================================================
+📊 📊 DATASET EXPLORATION REPORT
+================================================================================
+
+================================================================================
+1️⃣ 1️⃣  LOADING DATASETS
+================================================================================
+✅ Successfully loaded train.csv
+✅ Successfully loaded test.csv
+
+================================================================================
+2️⃣ 2️⃣  DATASET STATISTICS
+================================================================================
+
+📋 📋 TRAIN.CSV
+--------------------------------------------------------------------------------
+Number of rows: 80
+Number of columns: 6
+
+Column names:
+  1. id
+  2. book_name
+  3. char
+  4. caption
+  5. content
+  6. label
+
+Data types:
+  id: int64
+  book_name: object
+  char: object
+  caption: object
+  content: object
+  label: object
+
+Missing values:
+  caption: 49 (61.25%)
+
+First 5 rows:
+--------------------------------------------------------------------------------
+    id                   book_name        char                                                      caption                                                                                                                                                                                                                                                                            content       label
+0   46  In Search of the Castaways    Thalcave                                                          NaN  Thalcave’s people faded as colonists advanced; his father, last of the tribal guides, knew the pampas geography and animal ways, while his mother died giving birth. Boyhood was spent roaming the plains with his father, learning to track, tame horses and steer by the stars.  consistent
+1  137   The Count of Monte Cristo       Faria  The Origin of His Connection with the Count of Monte Cristo                                                                                                                                                                                   Suspected again in 1815, he was re-arrested and shipped to the Château d’If, this time for life.  contradict
+2   74  In Search of the Castaways  Kai-Koumou                                                          NaN                                                                                                                                                           Before each fight he studied the crack-patterns of his mother’s shark-tooth necklace by moonlight to divine the outcome.  consistent
+3  109   The Count of Monte Cristo    Noirtier                   The Complexity of Family and Personal Life                                                                                                                                                                 Villefort’s drift toward the royalists disappointed him; father and son argued politics at every family gathering.  contradict
+4  104   The Count of Monte Cristo    Noirtier       Involvement and Turning Point in the French Revolution                                                                                                                                                 His parents were targeted in a reprisal for supporting the Revolution; his mother was killed, deepening his distrust of authority.  consistent
+
+
+📋 📋 TEST.CSV
+--------------------------------------------------------------------------------
+Number of rows: 60
+Number of columns: 5
+
+Column names:
+  1. id
+  2. book_name
+  3. char
+  4. caption
+  5. content
+
+Data types:
+  id: int64
+  book_name: object
+  char: object
+  caption: object
+  content: object
+
+Missing values:
+  caption: 37 (61.67%)
+
+First 5 rows:
+--------------------------------------------------------------------------------
+    id                   book_name      char                                 caption                                                                                                                                                                                                                                    content
+0   95   The Count of Monte Cristo  Noirtier  The Fatal Decision of the Hundred Days  Learning that Villefort meant to denounce him to Louis XVIII, Noirtier pre-emptively handed the conspiracy dossier to a British spy—the very file the Count of Monte Cristo later acquired—thereby engineering his son’s “lawful” murder.
+1  136   The Count of Monte Cristo     Faria                  Escape and Secret Life                                                                                              From 1800 onward he lived quietly on a small island, drafting a vast work on human intelligence while sending chapters out by secret courier.
+2   59  In Search of the Castaways  Thalcave                                     NaN                                                                                          Posing as a relay-station hand, he slipped captivity, returned to the mountains and stayed alive with rope-climbing and avalanche-reading skills.
+3   60  In Search of the Castaways  Thalcave                                     NaN                                                                            First rescue: in 1852 an avalanche buried a silver-prospecting caravan; Thalcave led a night dig that saved eight survivors, among them French geographer Roux.
+4  124   The Count of Monte Cristo     Faria          Foreshadowing of Relationships                                                                                                                                                On the Marseille quay he noticed young Caderousse stealing a mooring rope but said nothing.
+
+================================================================================
+3️⃣ 3️⃣  BOOKS IN BOOKS/ FOLDER
+================================================================================
+
+Found 2 book file(s):
+
+  📚 In search of the castaways.txt
+     Size: 825.15 KB (844,953 bytes)
+
+  📚 The Count of Monte Cristo.txt
+     Size: 2.66 MB (2,787,166 bytes)
+
+================================================================================
+4️⃣ 4️⃣  BOOK USAGE MAPPING
+================================================================================
+
+Book distribution:
+--------------------------------------------------------------------------------
+  📖 In Search of the Castaways
+     Train: ✅ (49 rows)
+     Test:  ✅ (37 rows)
+
+  📖 The Count of Monte Cristo
+     Train: ✅ (31 rows)
+     Test:  ✅ (23 rows)
+
+Summary:
+--------------------------------------------------------------------------------
+  Total unique books: 2
+  Books in train only: 0
+  Books in test only: 0
+  Books in both: 2
+
+  Books in both train and test:
+    - In Search of the Castaways
+    - The Count of Monte Cristo
+
+================================================================================
+5️⃣ 5️⃣  ADDITIONAL STATISTICS
+================================================================================
+
+Train.csv - Label Distribution:
+--------------------------------------------------------------------------------
+  consistent: 51 (63.75%)
+  contradict: 29 (36.25%)
+
+Train.csv - Character Distribution:
+--------------------------------------------------------------------------------
+  Total unique characters: 6
+  Top 10 characters:
+    Jacques Paganel: 17
+    Noirtier: 16
+    Faria: 15
+    Tom Ayrton/Ben Joyce: 12
+    Thalcave: 10
+    Kai-Koumou: 10
+
+
+Test.csv - Character Distribution:
+--------------------------------------------------------------------------------
+  Total unique characters: 6
+  Top 10 characters:
+    Faria: 13
+    Thalcave: 11
+    Noirtier: 10
+    Kai-Koumou: 10
+    Tom Ayrton/Ben Joyce: 8
+    Jacques Paganel: 8
+
+================================================================================
+6️⃣ 6️⃣  SAVING SUMMARY
+================================================================================
